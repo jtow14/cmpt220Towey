@@ -12,6 +12,7 @@ public class Exercise_3_5
 		System.out.print("Enter the number of days passed since today ::  ");
 		int elapsed = input.nextInt();
 
+		// JA: You forgot to add the elapse to get the next day
 		if(day == 0)
 		{
 		    System.out.println("Sunday");
