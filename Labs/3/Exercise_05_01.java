@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// JA: You need a loop to re3ad all the values and calculate the average
 public class Exercise_05_01
 {
 	public static void main(String[] args)
