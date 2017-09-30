@@ -6,17 +6,19 @@ public class Exercise_06_09
 		System.out.println("\nFeet     Meters     |     Meters     Feet\n" + "----------------------------------------------");
 		for (double feet = 1.0, meters = 20.0; feet <= 10.0; feet++, meters += 5)
 		{
-			System.out.printf("%4.1f     ", feet);
 			System.out.printf("%6.3f", feetToMeters(feet));
-			System.out.print("     |     ");
-			System.out.printf("%-11.1f", meters);
-			System.out.printf("%7.3f\n", metersToFeet(meters));
-		}
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter three sides for a triangle :: ");
+		double side2 = input.nextDouble();
+		double side3 = input.nextDouble();
+		
+		System.out.println(isValid(side1, side2, side3) ? "The area of the triangle is " + area(side1, side2, side3) : "Input is invalid");
 	}
-	
-	public static double feetToMeters(double feet)
+
+	public static boolean isValid(double side1, double side2, double side3)
 	{
-		return 0.305 * feet;
+		boolean valid = side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1;
+		return valid;
 	}
 
 	public static double metersToFeet(double meters)
