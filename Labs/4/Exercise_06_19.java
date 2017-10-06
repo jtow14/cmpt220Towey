@@ -1,14 +1,12 @@
+import java.util.Scanner;
 
-public class Exercise_06_09
+public class Exercise_06_19
 {
 	public static void main(String[] args)
 	{
-		System.out.println("\nFeet     Meters     |     Meters     Feet\n" + "----------------------------------------------");
-		for (double feet = 1.0, meters = 20.0; feet <= 10.0; feet++, meters += 5)
-		{
-			System.out.printf("%6.3f", feetToMeters(feet));
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter three sides for a triangle :: ");
+		double side1 = input.nextDouble();
 		double side2 = input.nextDouble();
 		double side3 = input.nextDouble();
 		
@@ -21,8 +19,9 @@ public class Exercise_06_09
 		return valid;
 	}
 
-	public static double metersToFeet(double meters)
+	public static double area(double side1, double side2, double side3)
 	{
-		return 3.279 * meters;
+		double s = (side1 + side2 + side3) / 2;
+		return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
 	}
 }
