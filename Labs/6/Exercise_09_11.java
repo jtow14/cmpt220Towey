@@ -15,6 +15,7 @@ public class Exercise_09_11
 		double e = input.nextDouble();
 		double f = input.nextDouble();
 
+		// JA: Where is this class defined?
 		LinearEquation linearEquation = new LinearEquation(a, b, c, d, e, f);
 		
 		if (linearEquation.isSolvable())

@@ -19,6 +19,8 @@ public class Exercise_09_13
 				array[i][j] = input.nextDouble();
 			}
 		}
+		
+		// JA: This is missing the part where you calculate the largest element
 		System.out.println("The location of the largest element is " + maxValue + " at (" + row + ", " + column + ")");
 	}
 }
